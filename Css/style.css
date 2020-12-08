@@ -9,6 +9,7 @@
 
 /* css root variables */
 :root {
+    --white: #ffffff;
     --soft-white: #f1f1f1;
 }
 
@@ -17,11 +18,74 @@ html {  font-size: 62.5%; }
 
 body {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
     display: flex;
     background: var(--soft-white);
     flex-direction: column;
     align-items: center;
     font-family: 'Poppins', sans-serif;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+
+/* page form element */
+.form {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* form input box */
+.form .text-area {
+    width: 20rem ;
+    height: 4rem;
+    padding: 1rem;
+    border: none;
+    font-weight: bold;
+    background: var(--white);
+}
+.form .text-area:focus {
+    outline: 0;
+}
+
+/* form submit button */
+.form .button {
+    width: 4rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border: 2px solid grey;
+    background: var(--white);
+}
+.form .button:focus {
+    outline: 0;
+}
+
+/* Data Container Div Element */
+.data-container {
+    width: 100%;
+    height: auto ;
+    margin: 1rem 0;
+    padding: 1rem ;
+    min-height: 5rem;
+    max-height: calc(100% - 10rem);
+    overflow: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+/* Data Container Content */
+.data-container .small {
+    width: 80%;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    word-spacing: 0.3rem;
+    padding: 1rem;
+    background: red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
