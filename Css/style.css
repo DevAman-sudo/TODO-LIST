@@ -83,35 +83,37 @@ body {
     overflow: auto;
     display: flex;
     align-items: center;
-    flex-direction: column-reverse;
+    flex-direction: column;
 }
 
 /* Data Container Content */
-.data-container .small , .smallChecked {
-    width: 80%;
-    height: auto;
-    min-height: 4rem;
-    margin: 1rem 0;
-    font-size: 1.2rem;
-    font-weight: bold;
-    letter-spacing: 0.1rem;
-    word-spacing: 0.3rem;
-    background: var(--soft-white);
-    display: flex;
-    align-items: center;
-}
-.data-container .small .content {
-    max-width: 60%;
-    height: 100%;
-    min-height: 4rem;
-    background: red;
-    overflow-x: hidden;
-    overflow-y: auto;
-    text-wrap: wrap;
-}
 .data-container .smallChecked  {
+    width: 28rem;
     text-decoration: line-through;
     opacity: .5 ;
+} 
+
+/* Data Container / Data Element */
+.data-container .data-element {
+    display: flex;
+    background: var(--soft-white);
+}
+
+/* .data-container data-content */
+.data-container .data-content {
+    width: 20rem;
+    height: auto;
+    padding: 1rem;
+    min-height: 4rem;
+    overflow-x: auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+/* button container */
+.data-container .button-container {
+    width: 8rem;
+    height: 4rem;
 }
 
 /* Data Container Check Button */
@@ -120,7 +122,6 @@ body {
     height: 4rem;
     color: var(--soft-white);
     font-size: 1.5rem;
-    margin-left: auto;
     background: green;
     border: none;
 }

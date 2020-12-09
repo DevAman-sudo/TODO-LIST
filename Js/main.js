@@ -9,6 +9,10 @@ const audio = new Audio('MP3/notification.mp3');
 
 // Append Data Function In Data Container //
 function appendData(data) {
+    // Creating Button Container //
+    const buttonContainer =  document.createElement('div');
+    buttonContainer.classList.add('button-container');
+    
     // Creating Check Button //
     const checkButton = document.createElement('button');
     checkButton.classList.add('check');
@@ -21,15 +25,20 @@ function appendData(data) {
     
     // Creating Div Element For Data Container //
     const dataElement = document.createElement('div');
-    dataElement.classList.add('small');
+    dataElement.classList.add('data-element');
+    
+    // Creating Content Holder For Data Element //
     const dataElementChild = document.createElement('div');
-    dataElementChild.classList.add('content');
+    dataElementChild.classList.add('data-content');
     dataElementChild.innerText = data ;
     
-    // Appending Data On Created Content //
+    // Adding Button to buttonContainer //
+    buttonContainer.appendChild(checkButton);
+    buttonContainer.appendChild(deleteButton);
+    
+    // Appending Created Container To Data Container //
     dataElement.appendChild(dataElementChild);
-    dataElement.appendChild(checkButton);
-    dataElement.appendChild(deleteButton);
+    dataElement.appendChild(buttonContainer);
     dataContainer.appendChild(dataElement);
     
     // Listining Click Event On checkButton //
@@ -38,7 +47,7 @@ function appendData(data) {
         event.preventDefault();
         
         // Changing Styles On Click //
-        checkButton.parentElement.classList.toggle('smallChecked');
+        dataElement.classList.toggle('smallChecked');
     });
     
     // Listining Click Event On deleteButton //  
@@ -47,6 +56,7 @@ function appendData(data) {
         event.preventDefault();
         
         // Deleting Content On Click //
+        dataElement.remove();
         deleteButton.parentElement.remove();
     });
 }
@@ -69,7 +79,7 @@ form.addEventListener('submit', (event) => {
     
     // Animating Content Element On Data Add //
     anime({
-        targets: '.small' ,
+        targets: '.data-element' ,
         translateY: 5
     })
 
@@ -78,7 +88,7 @@ form.addEventListener('submit', (event) => {
 });
 
 // Demo Push Js Notify Function //
-function notify() {
+function notify() { // It Will Not Work In Mobile Devices //
     Push.create('Hello World');
 }
 notify();
