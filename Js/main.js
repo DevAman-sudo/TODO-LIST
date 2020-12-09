@@ -5,7 +5,7 @@ const button = document.getElementById('button');
 const dataContainer = document.getElementById('data-container');
 
 // Audio MP3 Path //
-const audio = new Audio('/MP3/notification.mp3');
+const audio = new Audio('MP3/notification.mp3');
 
 // Append Data Function In Data Container //
 function appendData(data) {
