@@ -20,4 +20,4 @@
 
 ### Dummy Look
 
-![Demo View](DemoView.png)
+<img alt="DemoView" src="DemoView.png" />
