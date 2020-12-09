@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fonts Poppins -- stylesheet Path -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins&display=swap">
+    <!-- bootstrap font awesome cdn -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Local Css File Path -->
     <link rel="stylesheet" href="/Css/style.css" />
     <!-- Favicon And Page Title -->
@@ -14,15 +18,19 @@
     <!-- Form For My Todo List -->
     <form class="form" id="form" action="#" method="get" accept-charset="utf-8">
         <input type="text" name="text" id="text-area" class="text-area" placeholder="Type ..." autocomplete="off" />
-        <button class="button" id="button" type="submit"></button>
+        <button class="button" id="button" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
     </form>
     
     <!-- Data Container To Store Content From Form -->
     <div id="data-container" class="data-container">
-        
     </div>
     
+    <!-- Anime Js CDN link -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Push Js File Path For Notifications -->
+    <script defer src="/Js/push.min.js" type="text/javascript" charset="utf-8"></script>
+    <script defer src="/Js/serviceWorker.min.js" type="text/javascript" charset="utf-8"></script>
     <!-- Local JavaScript File Path --->
-    <script src="/Js/main.js" type="text/javascript" charset="utf-8"></script>
+    <script defer src="/Js/main.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>

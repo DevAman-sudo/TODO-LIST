@@ -9,8 +9,10 @@
 
 /* css root variables */
 :root {
-    --white: #ffffff;
+    --red: #E51400;
+    --green: #008A00;
     --soft-white: #f1f1f1;
+    --main-background: #6A00FF;
 }
 
 /* Html and Body Tag */
@@ -20,7 +22,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: flex;
-    background: var(--soft-white);
+    background: var(--main-background);
     flex-direction: column;
     align-items: center;
     font-family: 'Poppins', sans-serif;
@@ -43,7 +45,7 @@ body {
     padding: 1rem;
     border: none;
     font-weight: bold;
-    background: var(--white);
+    background: var(--soft-white);
 }
 .form .text-area:focus {
     outline: 0;
@@ -54,21 +56,30 @@ body {
     width: 4rem;
     height: 4rem;
     padding: 0.5rem;
-    border: 2px solid grey;
-    background: var(--white);
+    border: none;
+    background: var(--green);
+    display: grid;
+    align-items: center;
 }
 .form .button:focus {
     outline: 0;
 }
 
+/* button icon */
+.form .button .fa {
+    font-size: 2rem;
+    color: var(--soft-white);
+    object-fit:cover;
+    pointer-events: none;
+    cursor: pointer;
+}
+
 /* Data Container Div Element */
 .data-container {
     width: 100%;
-    height: auto ;
-    margin: 1rem 0;
-    padding: 1rem ;
-    min-height: 5rem;
     max-height: calc(100% - 10rem);
+    margin: 3rem 0;
+    padding: 1rem ;
     overflow: auto;
     display: flex;
     align-items: center;
@@ -76,16 +87,56 @@ body {
 }
 
 /* Data Container Content */
-.data-container .small {
+.data-container .small , .smallChecked {
     width: 80%;
+    height: auto;
+    min-height: 4rem;
     margin: 1rem 0;
     font-size: 1.2rem;
     font-weight: bold;
     letter-spacing: 0.1rem;
     word-spacing: 0.3rem;
-    padding: 1rem;
-    background: red;
+    background: var(--soft-white);
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
+}
+.data-container .small .content {
+    max-width: 60%;
+    height: 100%;
+    min-height: 4rem;
+    background: red;
+    overflow-x: hidden;
+    overflow-y: auto;
+    text-wrap: wrap;
+}
+.data-container .smallChecked  {
+    text-decoration: line-through;
+    opacity: .5 ;
+}
+
+/* Data Container Check Button */
+.data-container .check {
+    width: 4rem;
+    height: 4rem;
+    color: var(--soft-white);
+    font-size: 1.5rem;
+    margin-left: auto;
+    background: green;
+    border: none;
+}
+.data-container .check:focus {
+    outline: 0;
+}
+
+/* Data Container Delete Button */
+.data-container .delete {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    color: var(--soft-white);
+    background: var(--red);
+    border: none;
+}
+.data-container .delete:focus {
+    outline: 0;
 }
