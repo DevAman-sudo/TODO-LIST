@@ -20,8 +20,4 @@
 
 ### Dummy Look
 
-<img
-src=“DemoView.png”
-raw=true
-alt=“DemoView Pronouns”
-/>
+![DemoView](/DemoView.png)
