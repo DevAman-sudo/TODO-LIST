@@ -14,10 +14,10 @@
 
 ```
 - This App Is Hosted On ....
+[Todo Application](https://devaman-sudo.github.io/TODO-LIST/ "TODO APP")
 ```
 
-[TODO Application](https://devaman-sudo.github.io/TODO-LIST/ "TODO APP")
 
 ### Dummy Look
 
-![Optional Text](../master/DemoView.png)
+![Demo View](../main/DemoView.png)
